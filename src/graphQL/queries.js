@@ -23,6 +23,7 @@ const GET_STUFF = gql`
       items {
         name
         group {
+          title
           id
         }
 
