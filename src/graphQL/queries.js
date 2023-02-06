@@ -1,36 +1,22 @@
 import { useQuery, gql } from "@apollo/client";
 
 const GET_STUFF = gql`
-  query {
-    me {
-      name
-    }
-
-    boards(limit: 1) {
-      name
-
+  {
+    boards {
       columns {
-        title
         id
-        type
-      }
-
-      groups {
         title
-        id
       }
-
       items {
         name
+        id
         group {
           title
-          id
         }
-
         column_values {
           id
-          value
           text
+          title
         }
       }
     }
